@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <title>Kayıt Ol | Erkilic Hukuk Bürosu</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+    <a href="{{ url_for('index') }}" class="navbar-brand p-0">
+        <h1 class="m-0"><i class="fa fa-balance-scale me-3"></i>Erkilic Hukuk Bürosu</h1>
+    </a>
+</nav>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow p-4">
+                <h2 class="mb-4 text-center">Kayıt Ol</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="adsoyad" class="form-label">Ad Soyad</label>
+                        <input type="text" class="form-control" id="adsoyad" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-posta</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Şifre</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Kayıt Ol</button>
+                </form>
+                <div class="text-center mt-3">
+                    <a href="{{ url_for('giris') }}">Zaten hesabınız var mı? Giriş Yapın</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html> 

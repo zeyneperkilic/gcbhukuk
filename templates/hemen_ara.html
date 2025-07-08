@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <title>Hemen Ara | Erkilic Hukuk Bürosu</title>
+    <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+    <a href="{{ url_for('index') }}" class="navbar-brand p-0">
+        <h1 class="m-0"><i class="fa fa-balance-scale me-3"></i>Erkilic Hukuk Bürosu</h1>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-0">
+            <a href="{{ url_for('index') }}" class="nav-item nav-link">Anasayfa</a>
+            <a href="{{ url_for('hakkinda') }}" class="nav-item nav-link">Hakkında</a>
+            <a href="{{ url_for('hizmetler') }}" class="nav-item nav-link">Hizmetler</a>
+            <a href="{{ url_for('neden_biz') }}" class="nav-item nav-link">Neden Biz?</a>
+            <a href="{{ url_for('iletisim') }}" class="nav-item nav-link">İletişim</a>
+            <a href="{{ url_for('hemen_ara') }}" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4 active">Hemen Ara</a>
+        </div>
+    </div>
+</nav>
+<div class="container py-5 text-center">
+    <h2 class="mb-4">Hemen Ara</h2>
+    <p class="mb-4 fs-5">Hukuki danışmanlık veya randevu için bize hemen ulaşabilirsiniz.</p>
+    <a href="tel:+902120000000" class="btn btn-primary btn-lg mb-3"><i class="fa fa-phone me-2"></i>0212 000 00 00</a><br>
+    <a href="https://wa.me/902120000000" target="_blank" class="btn btn-success btn-lg"><i class="fab fa-whatsapp me-2"></i>WhatsApp ile İletişim</a>
+</div>
+<footer class="footer text-center mt-5">
+    <div>Adres: İstanbul, Türkiye | Telefon: 0 212 000 00 00 | E-posta: info@erkilichukuk.com</div>
+    <div class="mt-2">
+        <a href="#"><i class="fab fa-linkedin fa-lg me-2"></i></a>
+        <a href="#"><i class="fab fa-instagram fa-lg me-2"></i></a>
+        <a href="#"><i class="fab fa-facebook fa-lg me-2"></i></a>
+    </div>
+</footer>
+<script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/lightbox/js/lightbox.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 

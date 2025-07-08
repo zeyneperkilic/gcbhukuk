@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <title>İletişim | GCB Hukuk</title>
+    <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 justify-content-center">
+    <div class="d-flex align-items-center mx-auto">
+        <a href="{{ url_for('index') }}" class="navbar-brand p-0 d-flex align-items-center me-4">
+            <span style="font-family:'Times New Roman', Times, serif; font-size:1.7rem; font-weight:600; letter-spacing:1px; color:#fff;">GCB Hukuk</span>
+        </a>
+        <div class="navbar-nav d-flex flex-row align-items-center">
+            <a href="{{ url_for('index') }}" class="nav-item nav-link mx-2">Anasayfa</a>
+            <a href="{{ url_for('hakkinda') }}" class="nav-item nav-link mx-2">Hakkımızda</a>
+            <a href="{{ url_for('hizmetler') }}" class="nav-item nav-link mx-2">Faaliyet Alanları</a>
+            <a href="{{ url_for('neden_biz') }}" class="nav-item nav-link mx-2">Neden Biz?</a>
+            <a href="{{ url_for('iletisim') }}" class="nav-item nav-link active mx-2">İletişim</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Flash Mesajları -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <div class="container mt-3">
+            {% for category, message in messages %}
+                <div class="alert alert-{{ 'success' if category == 'success' else 'danger' }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
+
+<div class="container py-5">
+    <h2 class="mb-5 text-center">İletişim</h2>
+    <div class="row g-5">
+        <div class="col-md-6">
+            <h5>İletişim Bilgileri</h5>
+            <ul class="list-unstyled fs-5">
+                <li><i class="fa fa-map-marker-alt me-2"></i>Adres: İstanbul, Türkiye</li>
+                <li><i class="fa fa-phone me-2"></i>Telefon: 0 212 000 00 00</li>
+                <li><i class="fa fa-envelope me-2"></i>E-posta: info@gcbhukuk.com</li>
+            </ul>
+            <div class="mt-2">
+                <a href="#"><i class="fab fa-linkedin fa-lg me-2"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-lg me-2"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-lg me-2"></i></a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h5>Bize Ulaşın</h5>
+            <form method="POST" action="{{ url_for('iletisim') }}">
+                <div class="mb-3">
+                    <label for="ad" class="form-label">Ad</label>
+                    <input type="text" class="form-control" id="ad" name="ad" required>
+                </div>
+                <div class="mb-3">
+                    <label for="soyad" class="form-label">Soyad</label>
+                    <input type="text" class="form-control" id="soyad" name="soyad" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-posta</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="mesaj" class="form-label">Mesajınız</label>
+                    <textarea class="form-control" id="mesaj" name="mesaj" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Gönder</button>
+            </form>
+        </div>
+    </div>
+</div>
+<footer class="footer text-center mt-5">
+    <div>Adres: İstanbul, Türkiye | Telefon: 0 212 000 00 00 | E-posta: info@gcbhukuk.com</div>
+    <div class="mt-2">
+        <a href="#"><i class="fab fa-linkedin fa-lg me-2"></i></a>
+        <a href="#"><i class="fab fa-instagram fa-lg me-2"></i></a>
+        <a href="#"><i class="fab fa-facebook fa-lg me-2"></i></a>
+    </div>
+</footer>
+<script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/lightbox/js/lightbox.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 
