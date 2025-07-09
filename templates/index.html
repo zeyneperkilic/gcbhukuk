@@ -40,17 +40,19 @@
 
         <!-- Navbar & Hero Start -->
         <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 justify-content-center" style="background: #13357B;">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 justify-content-center" style="background: #210aa3;">
                 <div class="d-flex align-items-center mx-auto">
                     <a href="{{ url_for('index') }}" class="navbar-brand p-0 d-flex align-items-center me-4">
-                        <span style="font-family:'Times New Roman', Times, serif; font-size:1.7rem; font-weight:600; letter-spacing:1px; color:#fff;">GCB Hukuk</span>
+                        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="GCB Logo" style="height:50px; margin-right:10px;">
+                        <span style="font-family:'Times New Roman', Times, serif; font-size:2.2rem; font-weight:600; letter-spacing:1px; color:#fff;">GCB Hukuk</span>
                     </a>
                     <div class="navbar-nav d-flex flex-row align-items-center">
                         <a href="{{ url_for('index') }}" class="nav-item nav-link active mx-2">Anasayfa</a>
                         <a href="{{ url_for('hakkinda') }}" class="nav-item nav-link mx-2">Hakkımızda</a>
                         <a href="{{ url_for('hizmetler') }}" class="nav-item nav-link mx-2">Faaliyet Alanları</a>
-                        <a href="{{ url_for('neden_biz') }}" class="nav-item nav-link mx-2">Neden Biz?</a>
+                        <a href="{{ url_for('neden_biz') }}" class="nav-item nav-link mx-2">Kurumsal Sorumluluk</a>
                         <a href="{{ url_for('iletisim') }}" class="nav-item nav-link mx-2">İletişim</a>
+                        <a href="{{ url_for('yayinlar') }}" class="nav-item nav-link mx-2">Yayınlar</a>
                     </div>
                 </div>
             </nav>
@@ -79,8 +81,8 @@
                     </div>
                     <div class="col-lg-7" style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8));">
                         <h5 class="section-about-title pe-3">Hakkımızda</h5>
-                        <h1 class="mb-4">GCB Hukuk Bürosu'na Hoşgeldiniz</h1>
-                        <p class="mb-4">GCB Hukuk Bürosu, bireysel ve kurumsal müvekkillerimize kapsamlı hukuki çözümler sunar. Deneyimli avukatlarımız ile haklarınızı en iyi şekilde korumak için buradayız.</p>
+                        <h1 class="mb-4">GCB Hukuk ve Danışmanlık'e Hoşgeldiniz</h1>
+                        <p class="mb-4">GCB Hukuk ve Danışmanlık, bireysel ve kurumsal müvekkillerimize kapsamlı hukuki çözümler sunar. Deneyimli avukatlarımız ile haklarınızı en iyi şekilde korumak için buradayız.</p>
                         <p class="mb-4">Adalet, şeffaflık ve güven ilkeleriyle hareket ediyoruz. Hukuki süreçlerinizde yanınızda olmaktan gurur duyarız.</p>
                         <div class="row gy-2 gx-4 mb-4">
                             <div class="col-sm-6">
@@ -266,6 +268,89 @@
         </div>
         <!-- Faaliyet Alanlarımız End -->
 
+        <!-- Online Danışmanlık Start -->
+        <div class="container-fluid bg-light py-5">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="mb-4">Online Danışmanlık</h2>
+                        <p class="mb-4">Hukuki sorularınız için bizimle iletişime geçin. Uzman avukatlarımız size en kısa sürede dönüş yapacaktır.</p>
+                        <div class="row gy-3">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-check-circle text-primary me-3"></i>
+                                    <span>Hızlı yanıt garantisi</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-check-circle text-primary me-3"></i>
+                                    <span>Uzman hukuki danışmanlık</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-check-circle text-primary me-3"></i>
+                                    <span>Gizlilik garantisi</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-check-circle text-primary me-3"></i>
+                                    <span>7/24 iletişim imkanı</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <a href="{{ url_for('iletisim') }}" class="btn btn-primary rounded-pill py-3 px-5">Danışmanlık Al</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-lg">
+                            <div class="card-body p-5">
+                                <h4 class="mb-4">Hızlı İletişim Formu</h4>
+                                <form>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Adınız" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Soyadınız" required>
+                                        </div>
+                                        <div class="col-12">
+                                            <input type="email" class="form-control" placeholder="E-posta Adresiniz" required>
+                                        </div>
+                                        <div class="col-12">
+                                            <input type="tel" class="form-control" placeholder="Telefon Numaranız">
+                                        </div>
+                                        <div class="col-12">
+                                            <select class="form-control">
+                                                <option>Hukuki Alan Seçiniz</option>
+                                                <option>Bankacılık ve Finans</option>
+                                                <option>Şirketler Hukuku</option>
+                                                <option>Sermaye Piyasaları</option>
+                                                <option>İş ve Sosyal Güvenlik</option>
+                                                <option>Gayrimenkul Hukuku</option>
+                                                <option>Vergi Hukuku</option>
+                                                <option>Diğer</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <textarea class="form-control" rows="4" placeholder="Sorunuzu kısaca açıklayınız..." required></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary w-100 py-3">Gönder</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Online Danışmanlık End -->
+
         <!-- Footer Start -->
         <div class="container-fluid footer py-5">
             <div class="container py-5">
@@ -273,7 +358,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="mb-4 text-white">İletişim Bilgileri</h4>
-                            <a href=""><i class="fas fa-home me-2"></i> Ataşehir, İstanbul, Türkiye</a>
+                            <a href=""><i class="fas fa-home me-2"></i> Barbaros Mahallesi Al Zambak Sokak Varyap Meridian A Blok Grand Tower No:2/65 Ataşehir / İSTANBUL</a>
                             <a href=""><i class="fas fa-envelope me-2"></i> info@gcbhukuk.com</a>
                             <a href=""><i class="fas fa-phone me-2"></i> +90 212 000 00 00</a>
                             <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +90 212 000 00 01</a>
@@ -302,9 +387,10 @@
                             <h4 class="mb-4 text-white">Hızlı Linkler</h4>
                             <a href="{{ url_for('index') }}"><i class="fas fa-angle-right me-2"></i> Anasayfa</a>
                             <a href="{{ url_for('hakkinda') }}"><i class="fas fa-angle-right me-2"></i> Hakkımızda</a>
-                            <a href="{{ url_for('neden_biz') }}"><i class="fas fa-angle-right me-2"></i> Neden Biz?</a>
+                            <a href="{{ url_for('neden_biz') }}"><i class="fas fa-angle-right me-2"></i> Kurumsal Sorumluluk</a>
                             <a href="{{ url_for('iletisim') }}"><i class="fas fa-angle-right me-2"></i> İletişim</a>
                             <a href="#"><i class="fas fa-angle-right me-2"></i> Gizlilik Politikası</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> KVKK</a>
                         </div>
                     </div>
                 </div>
@@ -338,10 +424,10 @@
             <div class="container">
                 <div class="row g-4 align-items-center">
                     <div class="col-md-6 text-center text-md-end mb-md-0">
-                        <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">GCB Hukuk Bürosu</a>, Tüm hakları saklıdır.
+                        <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">GCB Hukuk ve Danışmanlık</a>, Tüm hakları saklıdır.
                     </div>
                     <div class="col-md-6 text-center text-md-start">
-                        <span class="text-white">Güvenilir hukuki çözüm ortağınız</span>
+                        <span class="text-white">Telif Hakkı ©️ 2025 Bu internet sitesinde yer alan tüm bilgiler ve logoya ilişkin tüm fikri mülkiyet hakları GCB Hukuk ve Danışmanlık Ofisi'ne aittir.</span>
                     </div>
                 </div>
             </div>

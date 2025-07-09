@@ -16,17 +16,19 @@
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 justify-content-center">
+<nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 justify-content-center" style="background: #10026e;">
     <div class="d-flex align-items-center mx-auto">
         <a href="{{ url_for('index') }}" class="navbar-brand p-0 d-flex align-items-center me-4">
-            <span style="font-family:'Times New Roman', Times, serif; font-size:1.7rem; font-weight:600; letter-spacing:1px; color:#fff;">GCB Hukuk</span>
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="GCB Logo" style="height:50px; margin-right:10px;">
+            <span style="font-family:'Times New Roman', Times, serif; font-size:2.2rem; font-weight:600; letter-spacing:1px; color:#fff;">GCB Hukuk</span>
         </a>
         <div class="navbar-nav d-flex flex-row align-items-center">
             <a href="{{ url_for('index') }}" class="nav-item nav-link mx-2">Anasayfa</a>
             <a href="{{ url_for('hakkinda') }}" class="nav-item nav-link active mx-2">Hakkımızda</a>
             <a href="{{ url_for('hizmetler') }}" class="nav-item nav-link mx-2">Faaliyet Alanları</a>
-            <a href="{{ url_for('neden_biz') }}" class="nav-item nav-link mx-2">Neden Biz?</a>
-            <a href="{{ url_for('iletisim') }}" class="nav-item nav-link mx-2">İletişim</a>
+                                    <a href="{{ url_for('neden_biz') }}" class="nav-item nav-link mx-2">Kurumsal Sorumluluk</a>
+                        <a href="{{ url_for('iletisim') }}" class="nav-item nav-link mx-2">İletişim</a>
+                        <a href="{{ url_for('yayinlar') }}" class="nav-item nav-link mx-2">Yayınlar</a>
         </div>
     </div>
 </nav>

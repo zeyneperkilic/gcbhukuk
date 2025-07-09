@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <title>Yayınlar - GCB Hukuk ve Danışmanlık</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="GCB Hukuk, yayınlar, bilgi notları, hukuki makaleler" name="keywords">
+    <meta content="GCB Hukuk ve Danışmanlık Ofisi'nin hukuki yayınları ve bilgi notları" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 justify-content-center" style="background: #10026e;">
+        <div class="d-flex align-items-center mx-auto">
+            <a href="{{ url_for('index') }}" class="navbar-brand p-0 d-flex align-items-center me-4">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="GCB Logo" style="height:50px; margin-right:10px;">
+                <span style="font-family:'Times New Roman', Times, serif; font-size:2.2rem; font-weight:600; letter-spacing:1px; color:#fff;">GCB Hukuk</span>
+            </a>
+            <div class="navbar-nav d-flex flex-row align-items-center">
+                <a href="{{ url_for('index') }}" class="nav-item nav-link mx-2">Anasayfa</a>
+                <a href="{{ url_for('hakkinda') }}" class="nav-item nav-link mx-2">Hakkımızda</a>
+                <a href="{{ url_for('hizmetler') }}" class="nav-item nav-link mx-2">Faaliyet Alanları</a>
+                <a href="{{ url_for('neden_biz') }}" class="nav-item nav-link mx-2">Kurumsal Sorumluluk</a>
+                <a href="{{ url_for('iletisim') }}" class="nav-item nav-link mx-2">İletişim</a>
+                <a href="{{ url_for('yayinlar') }}" class="nav-item nav-link active mx-2">Yayınlar</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Bilgi Notları Start -->
+    <div class="container-xxl py-5" style="margin-top: 100px;">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h1 class="mb-5">Bilgi Notları</h1>
+            </div>
+            <div class="row g-4">
+                <!-- Bilgi Notu 1 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fa fa-file-alt fa-2x text-primary me-3"></i>
+                                <div>
+                                    <h5 class="card-title mb-1">Bankacılık Hukuku Güncellemeleri</h5>
+                                    <small class="text-muted">15 Ocak 2025</small>
+                                </div>
+                            </div>
+                            <p class="card-text">2025 yılında bankacılık sektöründe yapılan yasal değişiklikler ve bunların müvekkillerimiz üzerindeki etkileri hakkında detaylı analiz.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Bankacılık</span>
+                                <a href="#" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bilgi Notu 2 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fa fa-building fa-2x text-primary me-3"></i>
+                                <div>
+                                    <h5 class="card-title mb-1">Şirketler Hukukunda Yeni Düzenlemeler</h5>
+                                    <small class="text-muted">10 Ocak 2025</small>
+                                </div>
+                            </div>
+                            <p class="card-text">Türk Ticaret Kanunu'nda yapılan değişiklikler ve şirket yönetiminde dikkat edilmesi gereken yeni hükümler.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-success">Şirketler Hukuku</span>
+                                <a href="#" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bilgi Notu 3 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fa fa-chart-line fa-2x text-primary me-3"></i>
+                                <div>
+                                    <h5 class="card-title mb-1">Sermaye Piyasaları Reforms</h5>
+                                    <small class="text-muted">5 Ocak 2025</small>
+                                </div>
+                            </div>
+                            <p class="card-text">Sermaye piyasalarında yapılan reformlar ve yatırımcıları etkileyen yeni düzenlemeler hakkında kapsamlı değerlendirme.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-warning">Sermaye Piyasaları</span>
+                                <a href="#" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bilgi Notu 4 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fa fa-home fa-2x text-primary me-3"></i>
+                                <div>
+                                    <h5 class="card-title mb-1">Gayrimenkul Hukuku Güncellemeleri</h5>
+                                    <small class="text-muted">1 Ocak 2025</small>
+                                </div>
+                            </div>
+                            <p class="card-text">Gayrimenkul sektöründe yapılan yasal değişiklikler ve alıcı-satıcı hakları konusunda önemli güncellemeler.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-info">Gayrimenkul</span>
+                                <a href="#" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bilgi Notu 5 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fa fa-users fa-2x text-primary me-3"></i>
+                                <div>
+                                    <h5 class="card-title mb-1">İş Hukuku Yeni Düzenlemeler</h5>
+                                    <small class="text-muted">28 Aralık 2024</small>
+                                </div>
+                            </div>
+                            <p class="card-text">İş hukukunda yapılan değişiklikler ve işçi-işveren ilişkilerini etkileyen yeni hükümler hakkında detaylı analiz.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-secondary">İş Hukuku</span>
+                                <a href="#" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bilgi Notu 6 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1.1s">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fa fa-balance-scale fa-2x text-primary me-3"></i>
+                                <div>
+                                    <h5 class="card-title mb-1">Vergi Hukuku Güncellemeleri</h5>
+                                    <small class="text-muted">25 Aralık 2024</small>
+                                </div>
+                            </div>
+                            <p class="card-text">Vergi mevzuatında yapılan değişiklikler ve mükellefleri etkileyen yeni düzenlemeler hakkında kapsamlı değerlendirme.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-danger">Vergi Hukuku</span>
+                                <a href="#" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sayfalama -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <nav aria-label="Yayın sayfaları">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Önceki</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Sonraki</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bilgi Notları End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-4">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4 text-white">İletişim Bilgileri</h4>
+                        <a href=""><i class="fas fa-home me-2"></i> Barbaros Mahallesi Al Zambak Sokak Varyap Meridian A Blok Grand Tower No:2/65 Ataşehir / İSTANBUL</a>
+                        <a href=""><i class="fas fa-envelope me-2"></i> info@gcbhukuk.com</a>
+                        <a href=""><i class="fas fa-phone me-2"></i> +90 212 000 00 00</a>
+                        <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +90 212 000 00 01</a>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-share fa-2x text-white me-2"></i>
+                            <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4 text-white">Hizmetlerimiz</h4>
+                        <a href="{{ url_for('hizmetler') }}"><i class="fas fa-angle-right me-2"></i> Bankacılık ve Finans</a>
+                        <a href="{{ url_for('hizmetler') }}"><i class="fas fa-angle-right me-2"></i> Şirketler Hukuku</a>
+                        <a href="{{ url_for('hizmetler') }}"><i class="fas fa-angle-right me-2"></i> Sermaye Piyasaları</a>
+                        <a href="{{ url_for('hizmetler') }}"><i class="fas fa-angle-right me-2"></i> Enerji ve Doğal Kaynaklar</a>
+                        <a href="{{ url_for('hizmetler') }}"><i class="fas fa-angle-right me-2"></i> İnşaat Hukuku</a>
+                        <a href="{{ url_for('hizmetler') }}"><i class="fas fa-angle-right me-2"></i> Gayrimenkul Hukuku</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4 text-white">Hızlı Linkler</h4>
+                        <a href="{{ url_for('index') }}"><i class="fas fa-angle-right me-2"></i> Anasayfa</a>
+                        <a href="{{ url_for('hakkinda') }}"><i class="fas fa-angle-right me-2"></i> Hakkımızda</a>
+                        <a href="{{ url_for('neden_biz') }}"><i class="fas fa-angle-right me-2"></i> Kurumsal Sorumluluk</a>
+                        <a href="{{ url_for('iletisim') }}"><i class="fas fa-angle-right me-2"></i> İletişim</a>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Gizlilik Politikası</a>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> KVKK</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Harita Bölümü -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h5 class="text-white mb-3">Büromuzun Konumu</h5>
+                    <div class="map-container" style="height: 200px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+                        <iframe 
+                            width="100%" 
+                            height="100%" 
+                            frameborder="0" 
+                            scrolling="no" 
+                            marginheight="0" 
+                            marginwidth="0" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.2755833121547!2d29.1300!3d40.9900!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDU5JzI0LjAiTiAyOcKwMDcnNDguMCJF!5e0!3m2!1str!2str!4v1234567890"
+                            style="border: 0;">
+                        </iframe>
+                    </div>
+                    <div class="text-center mt-2">
+                        <p class="mb-0 text-white"><i class="fas fa-map-marker-alt text-primary me-2"></i> Ataşehir, İstanbul, Türkiye</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright text-body py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-end mb-md-0">
+                    <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">GCB Hukuk ve Danışmanlık</a>, Tüm hakları saklıdır.
+                </div>
+                <div class="col-md-6 text-center text-md-start">
+                    <span class="text-white">Telif Hakkı ©️ 2025 Bu internet sitesinde yer alan tüm bilgiler ve logoya ilişkin tüm fikri mülkiyet hakları GCB Hukuk ve Danışmanlık Ofisi'ne aittir.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/lightbox/js/lightbox.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 
