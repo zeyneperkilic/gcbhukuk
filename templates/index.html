@@ -27,33 +27,6 @@
         <!-- Template Stylesheet -->
         <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
         <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo.png') }}">
-        
-        <!-- Navbar Styles -->
-        <style>
-            .navbar {
-                min-height: 80px !important;
-            }
-            .navbar-brand {
-                font-size: 2.2rem !important;
-            }
-            .navbar-nav .nav-link {
-                font-size: 1.1rem !important;
-                font-weight: 500 !important;
-                padding: 0.5rem 1rem !important;
-            }
-            @media (max-width: 768px) {
-                .navbar {
-                    min-height: 70px !important;
-                }
-                .navbar-brand {
-                    font-size: 1.8rem !important;
-                }
-                .navbar-nav .nav-link {
-                    font-size: 1rem !important;
-                    padding: 0.75rem 1rem !important;
-                }
-            }
-        </style>
     </head>
 
     <body>
@@ -68,7 +41,6 @@
 
         <!-- Navbar & Hero Start -->
         <div class="container-fluid position-relative p-0">
-            <!-- Navbar Start -->
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style="background: #0f0257;">
                 <div class="container-fluid">
                     <a href="{{ url_for('index') }}" class="navbar-brand p-0 d-flex align-items-center me-4">
@@ -90,7 +62,6 @@
                     </div>
                 </div>
             </nav>
-            <!-- Navbar End -->
             <!-- Video Hero Start -->
             <div class="video-header" style="padding-top: 80px; position: relative; height: 100vh; overflow: hidden;">
                 <div class="text-center text-white position-absolute w-100" style="top: 60%; left: 50%; transform: translate(-50%, -50%); z-index: 10;">
@@ -397,7 +368,6 @@
                             <span class="text-white d-block mb-1"><i class="fas fa-home me-2"></i> Barbaros Mahallesi Al Zambak Sokak Varyap Meridian A Blok Grand Tower No:2/65 Ataşehir / İSTANBUL</span>
                             <span class="text-white d-block mb-1"><i class="fas fa-envelope me-2"></i> info@gcbhukuk.com</span>
                             <span class="text-white d-block mb-1"><i class="fas fa-phone me-2"></i> +90 212 000 00 00</span>
-                            <span class="text-white d-block mb-3"><i class="fas fa-print me-2"></i> +90 212 000 00 01</span>
                             <!-- Sosyal medya linkleri kaldırıldı -->
                         </div>
                     </div>

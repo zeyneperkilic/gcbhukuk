@@ -3,76 +3,33 @@
 <head>
     <meta charset="utf-8">
     <title>İletişim | GCB Hukuk</title>
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
     <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
-    
-    <!-- Navbar Styles -->
-    <style>
-        .navbar {
-            min-height: 80px !important;
-        }
-        .navbar-brand {
-            font-size: 2.2rem !important;
-        }
-        .navbar-nav .nav-link {
-            font-size: 1.1rem !important;
-            font-weight: 500 !important;
-            padding: 0.5rem 1rem !important;
-        }
-        @media (max-width: 768px) {
-            .navbar {
-                min-height: 70px !important;
-            }
-            .navbar-brand {
-                font-size: 1.8rem !important;
-            }
-            .navbar-nav .nav-link {
-                font-size: 1rem !important;
-                padding: 0.75rem 1rem !important;
-            }
-        }
-    </style>
 </head>
 <body>
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style="background: #0f0257;">
-        <div class="container-fluid">
-            <a href="{{ url_for('index') }}" class="navbar-brand p-0 d-flex align-items-center me-4">
-                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="GCB Logo" style="height:50px; margin-right:10px;">
-                <span style="font-family:'Times New Roman', Times, serif; font-size:2.2rem; font-weight:600; letter-spacing:1px; color:#fff;">GCB Hukuk</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü Aç/Kapat">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto w-100 justify-content-center align-items-center">
-                    <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link mx-2" style="color: #fff !important;">Anasayfa</a></li>
-                    <li class="nav-item"><a href="{{ url_for('hakkinda') }}" class="nav-link mx-2" style="color: #fff !important;">Hakkımızda</a></li>
-                    <li class="nav-item"><a href="{{ url_for('hizmetler') }}" class="nav-link mx-2" style="color: #fff !important;">Faaliyet Alanları</a></li>
-                    <li class="nav-item"><a href="{{ url_for('neden_biz') }}" class="nav-link mx-2" style="color: #fff !important;">Kurumsal Sorumluluk</a></li>
-                    <li class="nav-item"><a href="{{ url_for('iletisim') }}" class="nav-link mx-2 active" style="color: #bfa046 !important;">İletişim</a></li>
-                    <li class="nav-item"><a href="{{ url_for('yayinlar') }}" class="nav-link mx-2" style="color: #fff !important;">Yayınlar</a></li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style="background: #0f0257;">
+    <div class="container-fluid">
+        <a href="{{ url_for('index') }}" class="navbar-brand p-0 d-flex align-items-center me-4">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="GCB Logo" style="height:50px; margin-right:10px;">
+            <span style="font-family:'Times New Roman', Times, serif; font-size:2.2rem; font-weight:600; letter-spacing:1px; color:#fff;">GCB Hukuk</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü Aç/Kapat">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto w-100 justify-content-center align-items-center">
+                <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link mx-2" style="color: #fff !important;">Anasayfa</a></li>
+                <li class="nav-item"><a href="{{ url_for('hakkinda') }}" class="nav-link mx-2" style="color: #fff !important;">Hakkımızda</a></li>
+                <li class="nav-item"><a href="{{ url_for('hizmetler') }}" class="nav-link mx-2" style="color: #fff !important;">Faaliyet Alanları</a></li>
+                <li class="nav-item"><a href="{{ url_for('neden_biz') }}" class="nav-link mx-2" style="color: #fff !important;">Kurumsal Sorumluluk</a></li>
+                <li class="nav-item"><a href="{{ url_for('iletisim') }}" class="nav-link mx-2 active" style="color: #bfa046 !important;">İletişim</a></li>
+                <li class="nav-item"><a href="{{ url_for('yayinlar') }}" class="nav-link mx-2" style="color: #fff !important;">Yayınlar</a></li>
+            </ul>
         </div>
-    </nav>
-    <!-- Navbar End -->
+    </div>
+</nav>
 
 <!-- Flash Mesajları -->
 {% with messages = get_flashed_messages(with_categories=true) %}
@@ -143,7 +100,6 @@
                             <span class="text-white d-block mb-1"><i class="fas fa-home me-2"></i> Barbaros Mahallesi Al Zambak Sokak Varyap Meridian A Blok Grand Tower No:2/65 Ataşehir / İSTANBUL</span>
                             <span class="text-white d-block mb-1"><i class="fas fa-envelope me-2"></i> info@gcbhukuk.com</span>
                             <span class="text-white d-block mb-1"><i class="fas fa-phone me-2"></i> +90 212 000 00 00</span>
-                            <span class="text-white d-block mb-3"><i class="fas fa-print me-2"></i> +90 212 000 00 01</span>
                             <!-- Sosyal medya linkleri kaldırıldı -->
                         </div>
                     </div>
