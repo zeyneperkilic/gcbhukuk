@@ -21,27 +21,29 @@
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style="background: #0f0257;">
-    <div class="container-fluid">
-        <a href="{{ url_for('index') }}" class="navbar-brand p-0 d-flex align-items-center me-4">
-            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="GCB Logo" style="height:50px; margin-right:10px;">
-            <span style="font-family:'Times New Roman', Times, serif; font-size:2.2rem; font-weight:600; letter-spacing:1px; color:#fff;">GCB Hukuk</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü Aç/Kapat">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto w-100 justify-content-center align-items-center">
-                <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link mx-2" style="color: #fff !important;">Anasayfa</a></li>
-                <li class="nav-item"><a href="{{ url_for('hakkinda') }}" class="nav-link mx-2" style="color: #fff !important;">Hakkımızda</a></li>
-                <li class="nav-item"><a href="{{ url_for('hizmetler') }}" class="nav-link mx-2 active" style="color: #bfa046 !important;">Faaliyet Alanları</a></li>
-                <li class="nav-item"><a href="{{ url_for('neden_biz') }}" class="nav-link mx-2" style="color: #fff !important;">Kurumsal Sorumluluk</a></li>
-                <li class="nav-item"><a href="{{ url_for('iletisim') }}" class="nav-link mx-2" style="color: #fff !important;">İletişim</a></li>
-                <li class="nav-item"><a href="{{ url_for('yayinlar') }}" class="nav-link mx-2" style="color: #fff !important;">Yayınlar</a></li>
-            </ul>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style="background: #0f0257;">
+        <div class="container-fluid">
+            <a href="{{ url_for('index') }}" class="navbar-brand p-0 d-flex align-items-center me-4">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="GCB Logo" style="height:50px; margin-right:10px;">
+                <span style="font-family:'Times New Roman', Times, serif; font-size:2.2rem; font-weight:600; letter-spacing:1px; color:#fff;">GCB Hukuk</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü Aç/Kapat">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto w-100 justify-content-center align-items-center">
+                    <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link mx-2" style="color: #fff !important;">Anasayfa</a></li>
+                    <li class="nav-item"><a href="{{ url_for('hakkinda') }}" class="nav-link mx-2" style="color: #fff !important;">Hakkımızda</a></li>
+                    <li class="nav-item"><a href="{{ url_for('hizmetler') }}" class="nav-link mx-2 active" style="color: #bfa046 !important;">Faaliyet Alanları</a></li>
+                    <li class="nav-item"><a href="{{ url_for('neden_biz') }}" class="nav-link mx-2" style="color: #fff !important;">Kurumsal Sorumluluk</a></li>
+                    <li class="nav-item"><a href="{{ url_for('iletisim') }}" class="nav-link mx-2" style="color: #fff !important;">İletişim</a></li>
+                    <li class="nav-item"><a href="{{ url_for('yayinlar') }}" class="nav-link mx-2" style="color: #fff !important;">Yayınlar</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+    <!-- Navbar End -->
 
 <!-- Page Header Start -->
 <!-- KALDIRILDI: Büyük başlık ve breadcrumb -->
