@@ -9,41 +9,22 @@
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style="background: #10026e;">
-                <div class="container-fluid">
-                    <a href="{{ url_for('index') }}" class="navbar-brand p-0 d-flex align-items-center me-4">
-                        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="GCB Logo" style="height:40px; margin-right:10px;">
-                        <span style="font-family:'Times New Roman', Times, serif; font-size:1.8rem; font-weight:600; letter-spacing:1px; color:#fff;">GCB Hukuk</span>
-                    </a>
-                    
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a href="{{ url_for('index') }}" class="nav-link mx-2">Anasayfa</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ url_for('hakkinda') }}" class="nav-link mx-2">Hakkımızda</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ url_for('hizmetler') }}" class="nav-link mx-2">Faaliyet Alanları</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ url_for('neden_biz') }}" class="nav-link mx-2">Kurumsal Sorumluluk</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ url_for('iletisim') }}" class="nav-link active mx-2">İletişim</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ url_for('yayinlar') }}" class="nav-link mx-2">Yayınlar</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+<nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 justify-content-center" style="background: #10026e;">
+    <div class="d-flex align-items-center mx-auto">
+        <a href="{{ url_for('index') }}" class="navbar-brand p-0 d-flex align-items-center me-4">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="GCB Logo" style="height:50px; margin-right:10px;">
+            <span style="font-family:'Times New Roman', Times, serif; font-size:2.2rem; font-weight:600; letter-spacing:1px; color:#fff;">GCB Hukuk</span>
+        </a>
+        <div class="navbar-nav d-flex flex-row align-items-center">
+            <a href="{{ url_for('index') }}" class="nav-item nav-link mx-2">Anasayfa</a>
+            <a href="{{ url_for('hakkinda') }}" class="nav-item nav-link mx-2">Hakkımızda</a>
+            <a href="{{ url_for('hizmetler') }}" class="nav-item nav-link mx-2">Faaliyet Alanları</a>
+                                    <a href="{{ url_for('neden_biz') }}" class="nav-item nav-link mx-2">Kurumsal Sorumluluk</a>
+                        <a href="{{ url_for('iletisim') }}" class="nav-item nav-link active mx-2">İletişim</a>
+                        <a href="{{ url_for('yayinlar') }}" class="nav-item nav-link mx-2">Yayınlar</a>
+        </div>
+    </div>
+</nav>
 
 <!-- Flash Mesajları -->
 {% with messages = get_flashed_messages(with_categories=true) %}
@@ -111,17 +92,11 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="mb-4 text-white">İletişim Bilgileri</h4>
-                            <a href=""><i class="fas fa-home me-2"></i> Barbaros Mahallesi Al Zambak Sokak Varyap Meridian A Blok Grand Tower No:2/65 Ataşehir / İSTANBUL</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> info@gcbhukuk.com</a>
-                            <a href=""><i class="fas fa-phone me-2"></i> +90 212 000 00 00</a>
-                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +90 212 000 00 01</a>
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-share fa-2x text-white me-2"></i>
-                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
+                            <span class="text-white d-block mb-1"><i class="fas fa-home me-2"></i> Barbaros Mahallesi Al Zambak Sokak Varyap Meridian A Blok Grand Tower No:2/65 Ataşehir / İSTANBUL</span>
+                            <span class="text-white d-block mb-1"><i class="fas fa-envelope me-2"></i> info@gcbhukuk.com</span>
+                            <span class="text-white d-block mb-1"><i class="fas fa-phone me-2"></i> +90 212 000 00 00</span>
+                            <span class="text-white d-block mb-3"><i class="fas fa-print me-2"></i> +90 212 000 00 01</span>
+                            <!-- Sosyal medya linkleri kaldırıldı -->
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
@@ -160,12 +135,12 @@
                                 scrolling="no" 
                                 marginheight="0" 
                                 marginwidth="0" 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.2755833121547!2d29.1300!3d40.9900!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDU5JzI0LjAiTiAyOcKwMDcnNDguMCJF!5e0!3m2!1str!2str!4v1234567890"
+                                src="https://www.google.com/maps?q=Barbaros+Mahallesi+Al+Zambak+Sokak+Varyap+Meridian+A+Blok+Grand+Tower+No:2/65+Ataşehir+İstanbul&output=embed"
                                 style="border: 0;">
                             </iframe>
                         </div>
                         <div class="text-center mt-2">
-                            <p class="mb-0 text-white"><i class="fas fa-map-marker-alt text-primary me-2"></i> Ataşehir, İstanbul, Türkiye</p>
+                            <p class="mb-0 text-white"><i class="fas fa-map-marker-alt text-primary me-2"></i> Barbaros Mahallesi Al Zambak Sokak Varyap Meridian A Blok Grand Tower No:2/65 Ataşehir / İSTANBUL</p>
                         </div>
                     </div>
                 </div>
