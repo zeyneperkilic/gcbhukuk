@@ -16,38 +16,45 @@
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 justify-content-center" style="background: #10026e;">
-    <div class="d-flex align-items-center mx-auto">
+<nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style="background: #0f0257;">
+    <div class="container-fluid">
         <a href="{{ url_for('index') }}" class="navbar-brand p-0 d-flex align-items-center me-4">
             <img src="{{ url_for('static', filename='img/logo.png') }}" alt="GCB Logo" style="height:50px; margin-right:10px;">
             <span style="font-family:'Times New Roman', Times, serif; font-size:2.2rem; font-weight:600; letter-spacing:1px; color:#fff;">GCB Hukuk</span>
         </a>
-        <div class="navbar-nav d-flex flex-row align-items-center">
-            <a href="{{ url_for('index') }}" class="nav-item nav-link mx-2">Anasayfa</a>
-            <a href="{{ url_for('hakkinda') }}" class="nav-item nav-link active mx-2">Hakkımızda</a>
-            <a href="{{ url_for('hizmetler') }}" class="nav-item nav-link mx-2">Faaliyet Alanları</a>
-                                    <a href="{{ url_for('neden_biz') }}" class="nav-item nav-link mx-2">Kurumsal Sorumluluk</a>
-                        <a href="{{ url_for('iletisim') }}" class="nav-item nav-link mx-2">İletişim</a>
-                        <a href="{{ url_for('yayinlar') }}" class="nav-item nav-link mx-2">Yayınlar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü Aç/Kapat">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto w-100 justify-content-center align-items-center">
+                <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link mx-2" style="color: #fff !important;">Anasayfa</a></li>
+                <li class="nav-item"><a href="{{ url_for('hakkinda') }}" class="nav-link mx-2 active" style="color: #bfa046 !important;">Hakkımızda</a></li>
+                <li class="nav-item"><a href="{{ url_for('hizmetler') }}" class="nav-link mx-2" style="color: #fff !important;">Faaliyet Alanları</a></li>
+                <li class="nav-item"><a href="{{ url_for('neden_biz') }}" class="nav-link mx-2" style="color: #fff !important;">Kurumsal Sorumluluk</a></li>
+                <li class="nav-item"><a href="{{ url_for('iletisim') }}" class="nav-link mx-2" style="color: #fff !important;">İletişim</a></li>
+                <li class="nav-item"><a href="{{ url_for('yayinlar') }}" class="nav-link mx-2" style="color: #fff !important;">Yayınlar</a></li>
+            </ul>
         </div>
     </div>
 </nav>
 
 <!-- Ana İçerik -->
-<div class="container py-5 mt-5">
+<div class="container py-5 mt-6" style="margin-top: 90px;">
     <div class="row">
         <div class="col-lg-8 mx-auto">
             <!-- Kurucu Bölümü -->
-            <div class="mb-5" style="padding-top: 50px;">
-                <h3 class="mb-4" style="font-family:'Times New Roman', Times, serif; color:#13357B;">KURUCUMUZ – Av. Gizem Cemre Bağdınlı</h3>
-                <h5 class="mb-3 text-primary">Hukuka Tutkuyla, Geleceğe Vizyonla…</h5>
-                <p class="mb-4">GCB Hukuk ve Danışmanlık'ın kurucusu Avukat Gizem Cemre Bağdınlı, mesleki kariyerine güçlü bir akademik temel ve yüksek motivasyonla adım atmıştır. İstanbul'daki saygın hukuk fakültelerinden mezun olduktan sonra, birçok önemli hukuk bürosunda edindiği tecrübe ve içgörü ile kendi yolunu çizme kararı almış; 2021 yılında GCB Hukuk Ofisi'ni hayata geçirmiştir.</p>
-                <p class="mb-4">Av. Bağdınlı; özellikle şirketler hukuku, sözleşmeler hukuku, iş hukuku ve gayrimenkul hukuku alanlarında derinlemesine bilgiye ve uygulama deneyimine sahiptir. Analitik bakış açısı, müvekkil odaklı yaklaşımı ve hukuku yalnızca bir meslek değil, aynı zamanda bir toplumsal sorumluluk alanı olarak görmesiyle kısa sürede güvenilir bir hukuk danışmanı kimliği edinmiştir.</p>
-                <p class="mb-4">Vizyoner liderliği sayesinde, GCB Hukuk Ofisi kısa sürede kurumsal dünyada bilinirliğini artırmış ve sürdürülebilir bir büyüme ivmesi yakalamıştır.</p>
-                <blockquote class="blockquote text-center border-start border-primary ps-3">
-                    <p class="mb-0"><em>"Hukuk, sadece sorun çözme sanatı değil; aynı zamanda güven inşa etme yoludur."</em></p>
-                    
-                </blockquote>
+            <div class="card border-0 shadow-lg mb-5">
+                <div class="card-body p-5">
+                    <h3 class="mb-4" style="font-family:'Times New Roman', Times, serif; color:#13357B;">KURUCUMUZ – Av. Gizem Cemre Bağdınlı</h3>
+                    <h5 class="mb-3 text-primary">Hukuka Tutkuyla, Geleceğe Vizyonla…</h5>
+                    <p class="mb-4">GCB Hukuk ve Danışmanlık'ın kurucusu Avukat Gizem Cemre Bağdınlı, mesleki kariyerine güçlü bir akademik temel ve yüksek motivasyonla adım atmıştır. İstanbul'daki saygın hukuk fakültelerinden mezun olduktan sonra, birçok önemli hukuk bürosunda edindiği tecrübe ve içgörü ile kendi yolunu çizme kararı almış; 2021 yılında GCB Hukuk Ofisi'ni hayata geçirmiştir.</p>
+                    <p class="mb-4">Av. Bağdınlı; özellikle şirketler hukuku, sözleşmeler hukuku, iş hukuku ve gayrimenkul hukuku alanlarında derinlemesine bilgiye ve uygulama deneyimine sahiptir. Analitik bakış açısı, müvekkil odaklı yaklaşımı ve hukuku yalnızca bir meslek değil, aynı zamanda bir toplumsal sorumluluk alanı olarak görmesiyle kısa sürede güvenilir bir hukuk danışmanı kimliği edinmiştir.</p>
+                    <p class="mb-4">Vizyoner liderliği sayesinde, GCB Hukuk Ofisi kısa sürede kurumsal dünyada bilinirliğini artırmış ve sürdürülebilir bir büyüme ivmesi yakalamıştır.</p>
+                    <blockquote class="blockquote text-center border-start border-primary ps-3">
+                        <p class="mb-0"><em>"Hukuk, sadece sorun çözme sanatı değil; aynı zamanda güven inşa etme yoludur."</em></p>
+                        
+                    </blockquote>
+                </div>
             </div>
         </div>
     </div>
@@ -196,13 +203,13 @@
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="footer-item d-flex flex-column">
-                    <h4 class="mb-4 text-white">Hızlı Linkler</h4>
+                    <h4 class="mb-4 text-white">Kısayollar</h4>
                     <a href="{{ url_for('index') }}"><i class="fas fa-angle-right me-2"></i> Anasayfa</a>
                     <a href="{{ url_for('hakkinda') }}"><i class="fas fa-angle-right me-2"></i> Hakkımızda</a>
                     <a href="{{ url_for('neden_biz') }}"><i class="fas fa-angle-right me-2"></i> Kurumsal Sorumluluk</a>
                     <a href="{{ url_for('iletisim') }}"><i class="fas fa-angle-right me-2"></i> İletişim</a>
-                    <a href="#"><i class="fas fa-angle-right me-2"></i> Gizlilik Politikası</a>
-                    <a href="#"><i class="fas fa-angle-right me-2"></i> KVKK</a>
+                    <a href="{{ url_for('gizlilik') }}"><i class="fas fa-angle-right me-2"></i> Gizlilik Politikası</a>
+                    <a href="{{ url_for('kvkk') }}"><i class="fas fa-angle-right me-2"></i> KVKK</a>
                 </div>
             </div>
         </div>
@@ -236,10 +243,10 @@
     <div class="container">
         <div class="row g-4 align-items-center">
             <div class="col-md-6 text-center text-md-end mb-md-0">
-                <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">GCB Hukuk ve Danışmanlık</a>, Tüm hakları saklıdır.
+                <small class="text-white" style="font-size: 0.9em;"><i class="fas fa-copyright me-2"></i><a class="text-white" href="#">GCB Hukuk ve Danışmanlık</a>, Tüm hakları saklıdır.</small>
             </div>
             <div class="col-md-6 text-center text-md-start">
-                <span class="text-white">Telif Hakkı ©️ 2025 Bu internet sitesinde yer alan tüm bilgiler ve logoya ilişkin tüm fikri mülkiyet hakları GCB Hukuk ve Danışmanlık Ofisi'ne aittir.</span>
+                <small class="text-white" style="font-size: 0.9em;">Telif Hakkı ©️ 2025 Bu internet sitesinde yer alan tüm bilgiler ve logoya ilişkin tüm fikri mülkiyet hakları GCB Hukuk ve Danışmanlık Ofisi'ne aittir.</small>
             </div>
         </div>
     </div>
@@ -251,5 +258,6 @@
 <script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
 <script src="{{ url_for('static', filename='lib/lightbox/js/lightbox.min.js') }}"></script>
 <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html> 

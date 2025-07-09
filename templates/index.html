@@ -41,19 +41,24 @@
 
         <!-- Navbar & Hero Start -->
         <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 justify-content-center" style="background: #210aa3;">
-                <div class="d-flex align-items-center mx-auto">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style="background: #0f0257;">
+                <div class="container-fluid">
                     <a href="{{ url_for('index') }}" class="navbar-brand p-0 d-flex align-items-center me-4">
                         <img src="{{ url_for('static', filename='img/logo.png') }}" alt="GCB Logo" style="height:50px; margin-right:10px;">
                         <span style="font-family:'Times New Roman', Times, serif; font-size:2.2rem; font-weight:600; letter-spacing:1px; color:#fff;">GCB Hukuk</span>
                     </a>
-                    <div class="navbar-nav d-flex flex-row align-items-center">
-                        <a href="{{ url_for('index') }}" class="nav-item nav-link active mx-2">Anasayfa</a>
-                        <a href="{{ url_for('hakkinda') }}" class="nav-item nav-link mx-2">Hakkımızda</a>
-                        <a href="{{ url_for('hizmetler') }}" class="nav-item nav-link mx-2">Faaliyet Alanları</a>
-                        <a href="{{ url_for('neden_biz') }}" class="nav-item nav-link mx-2">Kurumsal Sorumluluk</a>
-                        <a href="{{ url_for('iletisim') }}" class="nav-item nav-link mx-2">İletişim</a>
-                        <a href="{{ url_for('yayinlar') }}" class="nav-item nav-link mx-2">Yayınlar</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü Aç/Kapat">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto w-100 justify-content-center align-items-center">
+                            <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link mx-2 active" style="color: #bfa046 !important;">Anasayfa</a></li>
+                            <li class="nav-item"><a href="{{ url_for('hakkinda') }}" class="nav-link mx-2" style="color: #fff !important;">Hakkımızda</a></li>
+                            <li class="nav-item"><a href="{{ url_for('hizmetler') }}" class="nav-link mx-2" style="color: #fff !important;">Faaliyet Alanları</a></li>
+                            <li class="nav-item"><a href="{{ url_for('neden_biz') }}" class="nav-link mx-2" style="color: #fff !important;">Kurumsal Sorumluluk</a></li>
+                            <li class="nav-item"><a href="{{ url_for('iletisim') }}" class="nav-link mx-2" style="color: #fff !important;">İletişim</a></li>
+                            <li class="nav-item"><a href="{{ url_for('yayinlar') }}" class="nav-link mx-2" style="color: #fff !important;">Yayınlar</a></li>
+                        </ul>
                     </div>
                 </div>
             </nav>
@@ -62,8 +67,9 @@
                 <div class="text-center text-white position-absolute w-100" style="top: 60%; left: 50%; transform: translate(-50%, -50%); z-index: 10;">
                     <h2 class="display-5 mb-3" style="font-family:'Times New Roman', Times, serif; font-weight:600; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); color: white;">Hukukun Zarafetiyle Gücünüze Güç Katıyoruz</h2>
                 </div>
-                <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 1;">
+                <video autoplay muted loop playsinline webkit-playsinline style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 1;" preload="auto">
                     <source src="{{ url_for('static', filename='img/varyap.mp4') }}" type="video/mp4">
+                    <source src="{{ url_for('static', filename='img/varyap.mp4') }}" type="video/mp4; codecs='avc1.42E01E, mp4a.40.2'">
                     Tarayıcınız video elementini desteklemiyor.
                 </video>
             </div>
@@ -379,13 +385,13 @@
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Hızlı Linkler</h4>
+                            <h4 class="mb-4 text-white">Kısayollar</h4>
                             <a href="{{ url_for('index') }}"><i class="fas fa-angle-right me-2"></i> Anasayfa</a>
                             <a href="{{ url_for('hakkinda') }}"><i class="fas fa-angle-right me-2"></i> Hakkımızda</a>
                             <a href="{{ url_for('neden_biz') }}"><i class="fas fa-angle-right me-2"></i> Kurumsal Sorumluluk</a>
                             <a href="{{ url_for('iletisim') }}"><i class="fas fa-angle-right me-2"></i> İletişim</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Gizlilik Politikası</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> KVKK</a>
+                            <a href="{{ url_for('gizlilik') }}"><i class="fas fa-angle-right me-2"></i> Gizlilik Politikası</a>
+                            <a href="{{ url_for('kvkk') }}"><i class="fas fa-angle-right me-2"></i> KVKK</a>
                         </div>
                     </div>
                 </div>
@@ -419,10 +425,10 @@
             <div class="container">
                 <div class="row g-4 align-items-center">
                     <div class="col-md-6 text-center text-md-end mb-md-0">
-                        <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">GCB Hukuk ve Danışmanlık</a>, Tüm hakları saklıdır.
+                        <small class="text-white" style="font-size: 0.9em;"><i class="fas fa-copyright me-2"></i><a class="text-white" href="#">GCB Hukuk ve Danışmanlık</a>, Tüm hakları saklıdır.</small>
                     </div>
                     <div class="col-md-6 text-center text-md-start">
-                        <span class="text-white">Telif Hakkı ©️ 2025 Bu internet sitesinde yer alan tüm bilgiler ve logoya ilişkin tüm fikri mülkiyet hakları GCB Hukuk ve Danışmanlık Ofisi'ne aittir.</span>
+                        <small class="text-white" style="font-size: 0.9em;">Telif Hakkı ©️ 2025 Bu internet sitesinde yer alan tüm bilgiler ve logoya ilişkin tüm fikri mülkiyet hakları GCB Hukuk ve Danışmanlık Ofisi'ne aittir.</small>
                     </div>
                 </div>
             </div>
@@ -436,6 +442,39 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
         <script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
         <script src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js') }}"></script>
+        <script>
+        // Mobil cihazlarda video oynatma sorununu çözmek için
+        document.addEventListener('DOMContentLoaded', function() {
+            var video = document.querySelector('.video-header video');
+            if (video) {
+                // Mobil cihaz kontrolü
+                var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                
+                if (isMobile) {
+                    // Mobil cihazlarda video oynatmayı zorla
+                    video.addEventListener('canplay', function() {
+                        video.play().catch(function(error) {
+                            console.log('Video oynatma hatası:', error);
+                        });
+                    });
+                    
+                    // Kullanıcı etkileşimi sonrası video oynatmayı dene
+                    document.addEventListener('touchstart', function() {
+                        video.play().catch(function(error) {
+                            console.log('Touch sonrası video oynatma hatası:', error);
+                        });
+                    }, { once: true });
+                }
+                
+                // Video yüklendiğinde otomatik oynatmayı dene
+                video.addEventListener('loadeddata', function() {
+                    video.play().catch(function(error) {
+                        console.log('Video yüklendikten sonra oynatma hatası:', error);
+                    });
+                });
+            }
+        });
+        </script>
         <script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
         <script src="{{ url_for('static', filename='lib/lightbox/js/lightbox.min.js') }}"></script>
         <script src="{{ url_for('static', filename='js/main.js') }}"></script>

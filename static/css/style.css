@@ -1404,6 +1404,23 @@ hr {
   }
 }
 
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    background: #0f0257 !important;
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .navbar-nav .nav-link {
+    color: #fff !important;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  .navbar-nav .nav-link.active {
+    color: #bfa046 !important;
+  }
+}
+
 /* HEADER MODERNLEŞTİRME */
 .navbar {
   background: #14213d !important;

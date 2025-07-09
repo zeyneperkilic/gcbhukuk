@@ -85,5 +85,30 @@ def kayit():
 def yayinlar():
     return render_template('yayinlar.html')
 
+@app.route('/yayin/<int:yayin_id>')
+def yayin_detay(yayin_id):
+    # Örnek veri, gerçek uygulamada veritabanından çekilebilir
+    yayinlar = {
+        1: {"baslik": "Bankacılık Hukuku Güncellemeleri", "tarih": "15 Ocak 2025", "icerik": "2025 yılında bankacılık sektöründe yapılan yasal değişiklikler ve bunların müvekkillerimiz üzerindeki etkileri hakkında detaylı analiz."},
+        2: {"baslik": "Şirketler Hukukunda Yeni Düzenlemeler", "tarih": "10 Ocak 2025", "icerik": "Türk Ticaret Kanunu'nda yapılan değişiklikler ve şirket yönetiminde dikkat edilmesi gereken yeni hükümler."},
+        3: {"baslik": "Sermaye Piyasaları Reforms", "tarih": "5 Ocak 2025", "icerik": "Sermaye piyasalarında yapılan reformlar ve yatırımcıları etkileyen yeni düzenlemeler hakkında kapsamlı değerlendirme."},
+        4: {"baslik": "Gayrimenkul Hukuku Güncellemeleri", "tarih": "1 Ocak 2025", "icerik": "Gayrimenkul sektöründe yapılan yasal değişiklikler ve alıcı-satıcı hakları konusunda önemli güncellemeler."},
+        5: {"baslik": "İş Hukuku Yeni Düzenlemeler", "tarih": "28 Aralık 2024", "icerik": "İş hukukunda yapılan değişiklikler ve işçi-işveren ilişkilerini etkileyen yeni hükümler hakkında detaylı analiz."},
+        6: {"baslik": "Vergi Hukuku Güncellemeleri", "tarih": "25 Aralık 2024", "icerik": "Vergi mevzuatında yapılan değişiklikler ve mükellefleri etkileyen yeni düzenlemeler hakkında kapsamlı değerlendirme."},
+    }
+    yayin = yayinlar.get(yayin_id)
+    if yayin:
+        return render_template('yayin_detay.html', yayin=yayin)
+    else:
+        return render_template('404.html'), 404
+
+@app.route('/gizlilik')
+def gizlilik():
+    return render_template('gizlilik.html')
+
+@app.route('/kvkk')
+def kvkk():
+    return render_template('kvkk.html')
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5001) 

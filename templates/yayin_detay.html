@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <title>{{ yayin.baslik }} | GCB Hukuk</title>
+    <meta name="description" content="{{ yayin.baslik }} - GCB Hukuk Yayın Detayı">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 justify-content-center" style="background: #10026e;">
+        <div class="d-flex align-items-center mx-auto">
+            <a href="{{ url_for('index') }}" class="navbar-brand p-0 d-flex align-items-center me-4">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="GCB Logo" style="height:50px; margin-right:10px;">
+                <span style="font-family:'Times New Roman', Times, serif; font-size:2.2rem; font-weight:600; letter-spacing:1px; color:#fff;">GCB Hukuk</span>
+            </a>
+        </div>
+    </nav>
+    <div class="container py-5 mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="mb-3">{{ yayin.baslik }}</h2>
+                <p class="text-muted mb-4">{{ yayin.tarih }}</p>
+                <div class="mb-5">
+                    <p>{{ yayin.icerik }}</p>
+                </div>
+                <a href="{{ url_for('yayinlar') }}" class="btn btn-secondary">Tüm Yayınlara Dön</a>
+            </div>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html> 

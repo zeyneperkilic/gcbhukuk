@@ -40,19 +40,24 @@
     <!-- Spinner End -->
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 justify-content-center" style="background: #10026e;">
-        <div class="d-flex align-items-center mx-auto">
+    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style="background: #0f0257;">
+        <div class="container-fluid">
             <a href="{{ url_for('index') }}" class="navbar-brand p-0 d-flex align-items-center me-4">
                 <img src="{{ url_for('static', filename='img/logo.png') }}" alt="GCB Logo" style="height:50px; margin-right:10px;">
                 <span style="font-family:'Times New Roman', Times, serif; font-size:2.2rem; font-weight:600; letter-spacing:1px; color:#fff;">GCB Hukuk</span>
             </a>
-            <div class="navbar-nav d-flex flex-row align-items-center">
-                <a href="{{ url_for('index') }}" class="nav-item nav-link mx-2">Anasayfa</a>
-                <a href="{{ url_for('hakkinda') }}" class="nav-item nav-link mx-2">Hakkımızda</a>
-                <a href="{{ url_for('hizmetler') }}" class="nav-item nav-link mx-2">Faaliyet Alanları</a>
-                <a href="{{ url_for('neden_biz') }}" class="nav-item nav-link mx-2">Kurumsal Sorumluluk</a>
-                <a href="{{ url_for('iletisim') }}" class="nav-item nav-link mx-2">İletişim</a>
-                <a href="{{ url_for('yayinlar') }}" class="nav-item nav-link active mx-2">Yayınlar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü Aç/Kapat">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto w-100 justify-content-center align-items-center">
+                    <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link mx-2" style="color: #fff !important;">Anasayfa</a></li>
+                    <li class="nav-item"><a href="{{ url_for('hakkinda') }}" class="nav-link mx-2" style="color: #fff !important;">Hakkımızda</a></li>
+                    <li class="nav-item"><a href="{{ url_for('hizmetler') }}" class="nav-link mx-2" style="color: #fff !important;">Faaliyet Alanları</a></li>
+                    <li class="nav-item"><a href="{{ url_for('neden_biz') }}" class="nav-link mx-2" style="color: #fff !important;">Kurumsal Sorumluluk</a></li>
+                    <li class="nav-item"><a href="{{ url_for('iletisim') }}" class="nav-link mx-2" style="color: #fff !important;">İletişim</a></li>
+                    <li class="nav-item"><a href="{{ url_for('yayinlar') }}" class="nav-link active mx-2" style="color: #bfa046 !important;">Yayınlar</a></li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -79,7 +84,7 @@
                             <p class="card-text">2025 yılında bankacılık sektöründe yapılan yasal değişiklikler ve bunların müvekkillerimiz üzerindeki etkileri hakkında detaylı analiz.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="badge bg-primary">Bankacılık</span>
-                                <a href="#" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
+                                <a href="{{ url_for('yayin_detay', yayin_id=1) }}" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
                             </div>
                         </div>
                     </div>
@@ -99,7 +104,7 @@
                             <p class="card-text">Türk Ticaret Kanunu'nda yapılan değişiklikler ve şirket yönetiminde dikkat edilmesi gereken yeni hükümler.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="badge bg-success">Şirketler Hukuku</span>
-                                <a href="#" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
+                                <a href="{{ url_for('yayin_detay', yayin_id=2) }}" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
                             </div>
                         </div>
                     </div>
@@ -119,7 +124,7 @@
                             <p class="card-text">Sermaye piyasalarında yapılan reformlar ve yatırımcıları etkileyen yeni düzenlemeler hakkında kapsamlı değerlendirme.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="badge bg-warning">Sermaye Piyasaları</span>
-                                <a href="#" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
+                                <a href="{{ url_for('yayin_detay', yayin_id=3) }}" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
                             </div>
                         </div>
                     </div>
@@ -139,7 +144,7 @@
                             <p class="card-text">Gayrimenkul sektöründe yapılan yasal değişiklikler ve alıcı-satıcı hakları konusunda önemli güncellemeler.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="badge bg-info">Gayrimenkul</span>
-                                <a href="#" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
+                                <a href="{{ url_for('yayin_detay', yayin_id=4) }}" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
                             </div>
                         </div>
                     </div>
@@ -159,7 +164,7 @@
                             <p class="card-text">İş hukukunda yapılan değişiklikler ve işçi-işveren ilişkilerini etkileyen yeni hükümler hakkında detaylı analiz.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="badge bg-secondary">İş Hukuku</span>
-                                <a href="#" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
+                                <a href="{{ url_for('yayin_detay', yayin_id=5) }}" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
                             </div>
                         </div>
                     </div>
@@ -179,29 +184,10 @@
                             <p class="card-text">Vergi mevzuatında yapılan değişiklikler ve mükellefleri etkileyen yeni düzenlemeler hakkında kapsamlı değerlendirme.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="badge bg-danger">Vergi Hukuku</span>
-                                <a href="#" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
+                                <a href="{{ url_for('yayin_detay', yayin_id=6) }}" class="btn btn-outline-primary btn-sm">Devamını Oku</a>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Sayfalama -->
-            <div class="row mt-5">
-                <div class="col-12">
-                    <nav aria-label="Yayın sayfaları">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" tabindex="-1">Önceki</a>
-                            </li>
-                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">Sonraki</a>
-                            </li>
-                        </ul>
-                    </nav>
                 </div>
             </div>
         </div>
@@ -215,10 +201,10 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="footer-item d-flex flex-column">
                         <h4 class="mb-4 text-white">İletişim Bilgileri</h4>
-                        <a href=""><i class="fas fa-home me-2"></i> Barbaros Mahallesi Al Zambak Sokak Varyap Meridian A Blok Grand Tower No:2/65 Ataşehir / İSTANBUL</a>
-                        <a href=""><i class="fas fa-envelope me-2"></i> info@gcbhukuk.com</a>
-                        <a href=""><i class="fas fa-phone me-2"></i> +90 212 000 00 00</a>
-                        <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +90 212 000 00 01</a>
+                        <span class="text-white d-block mb-1"><i class="fas fa-home me-2"></i> Barbaros Mahallesi Al Zambak Sokak Varyap Meridian A Blok Grand Tower No:2/65 Ataşehir / İSTANBUL</span>
+                        <span class="text-white d-block mb-1"><i class="fas fa-envelope me-2"></i> info@gcbhukuk.com</span>
+                        <span class="text-white d-block mb-1"><i class="fas fa-phone me-2"></i> +90 212 000 00 00</span>
+                        <span class="text-white d-block mb-3"><i class="fas fa-print me-2"></i> +90 212 000 00 01</span>
                         <!-- Sosyal medya linkleri kaldırıldı -->
                     </div>
                 </div>
@@ -235,13 +221,13 @@
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="footer-item d-flex flex-column">
-                        <h4 class="mb-4 text-white">Hızlı Linkler</h4>
+                        <h4 class="mb-4 text-white">Kısayollar</h4>
                         <a href="{{ url_for('index') }}"><i class="fas fa-angle-right me-2"></i> Anasayfa</a>
                         <a href="{{ url_for('hakkinda') }}"><i class="fas fa-angle-right me-2"></i> Hakkımızda</a>
                         <a href="{{ url_for('neden_biz') }}"><i class="fas fa-angle-right me-2"></i> Kurumsal Sorumluluk</a>
                         <a href="{{ url_for('iletisim') }}"><i class="fas fa-angle-right me-2"></i> İletişim</a>
-                        <a href="#"><i class="fas fa-angle-right me-2"></i> Gizlilik Politikası</a>
-                        <a href="#"><i class="fas fa-angle-right me-2"></i> KVKK</a>
+                        <a href="{{ url_for('gizlilik') }}"><i class="fas fa-angle-right me-2"></i> Gizlilik Politikası</a>
+                        <a href="{{ url_for('kvkk') }}"><i class="fas fa-angle-right me-2"></i> KVKK</a>
                     </div>
                 </div>
             </div>
@@ -258,12 +244,12 @@
                             scrolling="no" 
                             marginheight="0" 
                             marginwidth="0" 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.2755833121547!2d29.1300!3d40.9900!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDU5JzI0LjAiTiAyOcKwMDcnNDguMCJF!5e0!3m2!1str!2str!4v1234567890"
+                            src="https://www.google.com/maps?q=Barbaros+Mahallesi+Al+Zambak+Sokak+Varyap+Meridian+A+Blok+Grand+Tower+No:2/65+Ataşehir+İstanbul&output=embed"
                             style="border: 0;">
                         </iframe>
                     </div>
                     <div class="text-center mt-2">
-                        <p class="mb-0 text-white"><i class="fas fa-map-marker-alt text-primary me-2"></i> Ataşehir, İstanbul, Türkiye</p>
+                        <p class="mb-0 text-white"><i class="fas fa-map-marker-alt text-primary me-2"></i> Barbaros Mahallesi Al Zambak Sokak Varyap Meridian A Blok Grand Tower No:2/65 Ataşehir / İSTANBUL</p>
                     </div>
                 </div>
             </div>
@@ -275,10 +261,10 @@
         <div class="container">
             <div class="row g-4 align-items-center">
                 <div class="col-md-6 text-center text-md-end mb-md-0">
-                    <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">GCB Hukuk ve Danışmanlık</a>, Tüm hakları saklıdır.
+                    <small class="text-white" style="font-size: 0.9em;"><i class="fas fa-copyright me-2"></i><a class="text-white" href="#">GCB Hukuk ve Danışmanlık</a>, Tüm hakları saklıdır.</small>
                 </div>
                 <div class="col-md-6 text-center text-md-start">
-                    <span class="text-white">Telif Hakkı ©️ 2025 Bu internet sitesinde yer alan tüm bilgiler ve logoya ilişkin tüm fikri mülkiyet hakları GCB Hukuk ve Danışmanlık Ofisi'ne aittir.</span>
+                    <small class="text-white" style="font-size: 0.9em;">Telif Hakkı ©️ 2025 Bu internet sitesinde yer alan tüm bilgiler ve logoya ilişkin tüm fikri mülkiyet hakları GCB Hukuk ve Danışmanlık Ofisi'ne aittir.</small>
                 </div>
             </div>
         </div>
