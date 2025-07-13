@@ -1419,6 +1419,12 @@ hr {
   .navbar-nav .nav-link.active {
     color: #bfa046 !important;
   }
+  .navbar {
+    min-height: 80px;
+  }
+  body > .container, body > .container-fluid {
+    margin-top: 90px !important;
+  }
 }
 
 /* HEADER MODERNLEŞTİRME */
