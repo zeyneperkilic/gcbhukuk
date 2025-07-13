@@ -9,9 +9,9 @@ app.secret_key = 'gcb_hukuk_secret_key_2024'
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'  # Gmail kullanıyorsanız
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'your_email@gmail.com'  # Avukatın e-posta adresi
-app.config['MAIL_PASSWORD'] = 'your_app_password'  # Gmail uygulama şifresi
-app.config['MAIL_DEFAULT_SENDER'] = 'your_email@gmail.com'
+app.config['MAIL_USERNAME'] = 'zeynepp.erkilic@gmail.com'
+app.config['MAIL_PASSWORD'] = 'urvg jxqd ebiw fpfa'
+app.config['MAIL_DEFAULT_SENDER'] = 'zeynepp.erkilic@gmail.com'
 
 mail = Mail(app)
 
@@ -35,6 +35,8 @@ def iletisim():
             ad = request.form.get('ad')
             soyad = request.form.get('soyad')
             email = request.form.get('email')
+            telefon = request.form.get('telefon')
+            alan = request.form.get('alan')
             mesaj = request.form.get('mesaj')
             
             # E-posta içeriği oluştur
@@ -44,6 +46,8 @@ def iletisim():
             
             Ad Soyad: {ad} {soyad}
             E-posta: {email}
+            Telefon: {telefon}
+            Hukuki Alan: {alan}
             
             Mesaj:
             {mesaj}
@@ -52,7 +56,7 @@ def iletisim():
             """
             
             # E-postayı gönder
-            msg = Message(subject, recipients=['info@gcbhukuk.com'])
+            msg = Message(subject, recipients=['zeynepp.erkilic@gmail.com'])
             msg.body = body
             mail.send(msg)
             

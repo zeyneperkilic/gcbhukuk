@@ -316,34 +316,43 @@
                         <div class="card border-0 shadow-lg">
                             <div class="card-body p-5">
                                 <h4 class="mb-4">Hızlı İletişim Formu</h4>
-                                <form>
+                                <form method="POST" action="{{ url_for('iletisim') }}">
                                     <div class="row g-3">
                                         <div class="col-md-6">
-                                            <input type="text" class="form-control" placeholder="Adınız" required>
+                                            <input type="text" class="form-control" name="ad" placeholder="Adınız" required>
                                         </div>
                                         <div class="col-md-6">
-                                            <input type="text" class="form-control" placeholder="Soyadınız" required>
+                                            <input type="text" class="form-control" name="soyad" placeholder="Soyadınız" required>
                                         </div>
                                         <div class="col-12">
-                                            <input type="email" class="form-control" placeholder="E-posta Adresiniz" required>
+                                            <input type="email" class="form-control" name="email" placeholder="E-posta Adresiniz" required>
                                         </div>
                                         <div class="col-12">
-                                            <input type="tel" class="form-control" placeholder="Telefon Numaranız">
+                                            <input type="tel" class="form-control" name="telefon" placeholder="Telefon Numaranız">
                                         </div>
                                         <div class="col-12">
-                                            <select class="form-control">
+                                            <select class="form-control" name="alan">
                                                 <option>Hukuki Alan Seçiniz</option>
                                                 <option>Bankacılık ve Finans</option>
                                                 <option>Şirketler Hukuku</option>
                                                 <option>Sermaye Piyasaları</option>
-                                                <option>İş ve Sosyal Güvenlik</option>
+                                                <option>Enerji ve Doğal Kaynaklar</option>
+                                                <option>İnşaat Hukuku</option>
                                                 <option>Gayrimenkul Hukuku</option>
                                                 <option>Vergi Hukuku</option>
+                                                <option>İş ve Sosyal Güvenlik Hukuku</option>
+                                                <option>Kamulaştırma Hukuku</option>
+                                                <option>Alternatif Uyuşmazlık Çözümleri</option>
+                                                <option>Sigorta Hukuku</option>
+                                                <option>Aile Hukuku</option>
+                                                <option>Miras Hukuku</option>
+                                                <option>Ticaret Hukuku/Konkordato</option>
+                                                <option>Tüketici Hukuku</option>
                                                 <option>Diğer</option>
                                             </select>
                                         </div>
                                         <div class="col-12">
-                                            <textarea class="form-control" rows="4" placeholder="Sorunuzu kısaca açıklayınız..." required></textarea>
+                                            <textarea class="form-control" name="mesaj" rows="4" placeholder="Sorunuzu kısaca açıklayınız..." required></textarea>
                                         </div>
                                         <div class="col-12">
                                             <button type="submit" class="btn btn-primary w-100 py-3">Gönder</button>
