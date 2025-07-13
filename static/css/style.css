@@ -1405,25 +1405,14 @@ hr {
 }
 
 @media (max-width: 991.98px) {
-  .navbar-nav {
-    background: #0f0257 !important;
-    width: 100%;
-    padding: 1rem 0;
-  }
-  .navbar-nav .nav-link {
-    color: #fff !important;
-    text-align: center;
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-  }
-  .navbar-nav .nav-link.active {
-    color: #bfa046 !important;
-  }
   .navbar {
     min-height: 80px;
   }
-  body > .container, body > .container-fluid {
+  .navbar + .container, .navbar + .container-fluid {
     margin-top: 90px !important;
+  }
+  body > .container, body > .container-fluid {
+    margin-top: 0 !important;
   }
 }
 
