@@ -9,9 +9,9 @@ app.secret_key = 'gcb_hukuk_secret_key_2024'
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'  # Gmail kullanıyorsanız
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'zeynepp.erkilic@gmail.com'
-app.config['MAIL_PASSWORD'] = 'urvg jxqd ebiw fpfa'
-app.config['MAIL_DEFAULT_SENDER'] = 'zeynepp.erkilic@gmail.com'
+app.config['MAIL_USERNAME'] = 'info@gcbhukuk.com'
+app.config['MAIL_PASSWORD'] = 'xugx rgva hhwv tpca'
+app.config['MAIL_DEFAULT_SENDER'] = 'info@gcbhukuk.com'
 
 mail = Mail(app)
 
@@ -56,7 +56,7 @@ def iletisim():
             """
             
             # E-postayı gönder
-            msg = Message(subject, recipients=['zeynepp.erkilic@gmail.com'])
+            msg = Message(subject, recipients=['info@gcbhukuk.com'])
             msg.body = body
             mail.send(msg)
             
