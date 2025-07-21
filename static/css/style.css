@@ -1409,7 +1409,7 @@ hr {
     min-height: 80px;
   }
   .navbar + .container, .navbar + .container-fluid {
-    margin-top: 90px !important;
+    margin-top: 2.5rem !important;
   }
   body > .container, body > .container-fluid {
     margin-top: 0 !important;
